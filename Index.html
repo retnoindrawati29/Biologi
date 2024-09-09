@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz Biologi</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-screen">
+        <h1 class="heading">Kuis Biologi</h1>
+        <div class="settings">
+          <label for="num-questions">Jumlah Soal:</label>
+          <select id="num-questions">
+            <option value="5">5</option>
+          </select>
+          <label for="category">Pilih Kategori:</label>
+          <select id="category">
+            <option value="17">Biologi</option>
+          </select>
+          <label for="time">Waktu per soal:</label>
+          <select id="time">
+            <option value="10">10 detik</option>
+            <option value="15">15 detik</option>
+            <option value="20">20 detik</option>
+            <option value="25">25 detik</option>
+            <option value="30">30 detik</option>
+            <option value="60">60 detik</option>
+          </select>
+        </div>
+        <button class="btn start">Mulai Kuis</button>
+      </div>
+      <div class="quiz hide">
+        <div class="timer">
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <span class="progress-text"></span>
+          </div>
+        </div>
+        <div class="question-wrapper">
+          <div class="number">
+            Soal <span class="current">1</span>
+            <span class="total">/5</span>
+          </div>
+          <div class="question">Ini adalah pertanyaan?</div>
+        </div>
+        <div class="answer-wrapper">
+          <div class="answer selected">
+            <span class="text">Jawaban</span>
+            <span class="checkbox">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+        <button class="btn submit" disabled>Kirim</button>
+        <button class="btn next">Berikutnya</button>
+      </div>
+      <div class="end-screen hide">
+        <h1 class="heading">Kuis Biologi</h1>
+        <div class="score">
+          <span class="score-text">Skor Anda:</span>
+          <div>
+            <span class="final-score">0</span>
+            <span class="total-score">/5</span>
+          </div>
+        </div>
+        <button class="btn restart">Ulangi Kuis</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
